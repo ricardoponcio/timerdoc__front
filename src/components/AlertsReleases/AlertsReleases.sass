@@ -1,0 +1,42 @@
+@use '~/styles/_mixins'
+@use '~/styles/_variables'
+
+.card-alert-release-item
+    // width: feat-content
+    min-height: 140px
+    // margin: 12px 0
+    // margin-right: 30px
+    border-radius: 15px
+    box-shadow: 6px 6px 15px #bebebe, -6px -6px 15px #ffffff
+    max-width: 600px
+
+    // position: absolute
+    // left: 10px
+    // // .space {
+    // margin: 24px
+    // }
+
+    // &:last-child, &:first-child
+    //     margin: 0
+    // }
+
+    @include mixins.media(mobile,tablet)
+        --card-padding: 15px
+        .flex:has(> &)
+            flex-direction: column
+
+.alert
+    @each $type, $properties in variables.$type-alerts
+        &-#{$type}
+            background: map-get($properties, light)
+            background: linear-gradient(138deg, rgba(map-get($properties, light) , 1) 0%, rgba(map-get($properties, strong), 1) 35%)
+            &__head
+                padding: 30px
+                color: #5C0C14
+                font-weight: 600
+.alice-carousel__stage-item
+    // max-width: 50%
+    // border-right: 15px !important
+    margin: 0 12px !important
+    &:last-child, &:first-child
+        margin: 0 !important

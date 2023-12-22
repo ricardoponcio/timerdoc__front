@@ -1,0 +1,53 @@
+@use '~/styles/_mixins'
+@import "react-alice-carousel/lib/scss/alice-carousel.scss"
+
+@mixin center-flex
+    display: flex
+    justify-content: center
+    align-items: center
+
+.flex-between
+    display: flex
+    justify-content: space-between
+.flex-center
+    display: flex
+    justify-content: center
+    align-items: center
+
+.flex-around
+    display: flex
+    justify-content: space-around
+
+.flex-a-center
+    display: flex
+    align-items: center
+
+.hidden
+    display: none !important
+.no-over
+    overflow: scroll
+
+.flex-a-start
+    display: flex
+    align-items: flex-start
+
+.flex
+    display: flex
+
+.f-children-100 > *
+    width: 100%
+    min-height: 100%
+
+.container-max
+    max-width: 80vw
+    margin: 0 auto
+
+.text-bold
+    font-weight: 800
+.content-100
+    height: 100%
+    width: 100%
+
+.flex-mobile
+    @include mixins.media(mobile,tablet,small)
+        flex-direction: column

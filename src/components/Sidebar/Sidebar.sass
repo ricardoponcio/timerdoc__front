@@ -1,0 +1,57 @@
+@use '~/styles/_index'
+@use '~/styles/variables'
+
+.sidebar
+    @include index.center-flex
+    justify-content: flex-start
+    flex-direction: column
+    min-height: 100vh
+    max-width: 15rem
+    width: min-content
+    background-color: variables.$sidebar-bg-color
+    transition: 4s width ease-in
+    // padding: 10px
+
+    li
+        min-height: 2.5rem
+        // padding: .5rem 1rem
+        span
+            padding-left: 1rem
+    &.collapsed
+
+        span
+            transition: 4s
+            display: none
+    ul
+        list-style: none
+        padding: 0.5rem 0
+        .nav-item
+            transition: 1s
+            display: flex
+            white-space: nowrap
+            font-size: medium
+            align-items: center
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+            &:hover
+                cursor: pointer
+                color: lightgray
+            svg
+                font-size: 1.5rem
+                font-weight: bold
+            .text
+                flex-grow: 1
+                visibility: visible
+                width: 50%
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
+
+            &.select
+                background-color: #7D94B3
+                border-radius: -30px
+    #logo
+        height: 70px
+        width: 100%
+        background-color: gray

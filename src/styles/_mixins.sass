@@ -1,0 +1,7 @@
+@use '~/styles/_variables'
+
+@mixin media($keys...)
+    @each $key in $keys
+        $select: map-get(variables.$breakpoints, $key)
+        @media only screen and (min-width: map-get($select, min)) and (max-width: map-get($select, max))
+            @content

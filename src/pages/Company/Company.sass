@@ -1,0 +1,82 @@
+@use '~/styles/_variables'
+@use '~/styles/mixins'
+
+.container
+    max-width: 1300px
+    margin: auto
+    html
+        background-color: #394452
+
+#header_choice_company
+    padding-top: 15px
+    @include mixins.media(mobile, tablet)
+        padding: 15px
+        justify-content: space-between
+.container-company
+    background-color: variables.$sidebar-bg-color
+    min-height: 100vh
+    color: variables.$text-color-light
+
+    @include mixins.media(tablet)
+
+    .cards-companys
+        display: flex
+        gap: 10px
+        flex-wrap: wrap
+        @include mixins.media(mobile, tablet)
+            flex-direction: column
+            margin-top: 30px
+
+        .card-company
+            min-width: fit-content
+            flex: 1
+            color: variables.$text-color-light
+            display: flex
+            align-items: center
+            margin: auto
+            background-color: #394452
+            border: 0
+            border-radius: 15px
+            margin-bottom: 10px
+
+            text-transform: uppercase
+            .chakra-card__body
+                padding-top: 0
+                padding-bottom: 0
+            @include mixins.media(mobile, tablet)
+                width: 100%
+            &:hover
+                cursor: pointer
+                background-color: variables.$sidebar-bg-color-tec
+            .decline_company
+                transition: .8s
+                font-size: 20px
+                position: absolute
+                bottom: 10px
+                right: 10px
+                &:hover
+                    transform: scale(1.2)
+
+    &.company-create
+        display: flex
+        align-items: center
+        form
+            & > *
+                padding: 6px 0
+        button
+            width: 100%
+            margin: 24px 0
+    button
+        color: #00e5e6
+
+html .loading-companys-choice
+    height: 90vh
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+
+.company-edit
+    margin: 12px 12px 0 12px
+    h4
+        margin: 24px 0 0 24px

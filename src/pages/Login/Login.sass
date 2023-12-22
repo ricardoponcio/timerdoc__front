@@ -1,0 +1,89 @@
+@use '~/styles/_index'
+@use '~/styles/_variables'
+@use '~/styles/_mixins'
+
+#login
+    min-height: 100vh
+    display: flex
+
+    @include mixins.media(mobile,tablet)
+        flex-direction: column
+
+    .login-card
+        @include index.center-flex
+        overflow: hidden
+        width: 100%
+        flex-direction: column
+        padding: 0 2rem
+        background-color: variables.$sidebar-bg-color
+        color: variables.$body-bg-color
+        @include mixins.media(mobile, tablet, small)
+            padding: 0
+            flex-grow: 1
+        .card-default
+            width: 80%
+            background-color: variables.$sidebar-bg-color-tec
+            .title
+                text-transform: uppercase
+                padding: 30px 0
+                font-size: 20px
+                color: variables.$text-color-light
+                text-align: center
+            .relative
+                position: relative
+            .button-back
+                position: absolute
+                left: 0
+                top: 15%
+                font-size: 24px
+        input
+            color: #FFF
+        .chakra-form__error-message
+            background: rgb(255,156,173)
+            background: linear-gradient(90deg, rgba(255,156,173,1) 35%, rgba(255,156,173,0.15868345629267333) 65%, rgba(255,156,173,0) 100%)
+            padding: 2px 5px
+            border-radius: 3px
+
+        .chakra-card
+            background-color: variables.$sidebar-bg-color-tec
+            color: #92AED1
+            width: 80%
+        .complete_register_center
+            display: flex
+            justify-content: center
+
+    .card-forgot-password
+        .back
+            font-size: larger
+            position: absolute
+            cursor: pointer
+
+    .login-image
+        min-width: 60%
+        background-image: url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)
+        background-repeat: no-repeat
+        background-position: left bottom
+        background-size: cover
+        filter: grayscale(80%)
+        transition: .6s
+        padding: 24px
+
+        &:hover
+            filter: grayscale(10%)
+
+        > section
+            width: fit-content
+.loading-background-color
+    animation-name: loading-b-color
+    animation-duration: 3s
+    animation-timing-function: ease-in-out
+    animation-iteration-count: infinite
+    animation-play-state: running
+    background-color: variables.$sidebar-bg-color
+    @keyframes loading-b-color
+        0%
+            background-color: variables.$sidebar-bg-color
+        50.0%
+            background-color: variables.$sidebar-bg-color-tec
+        100.0%
+            background-color: variables.$sidebar-bg-color

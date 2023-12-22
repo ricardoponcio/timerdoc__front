@@ -1,0 +1,47 @@
+$font-stack: 'Helvetica', 'Arial', sans-serif;
+$body-bg-color: #effffb;
+$sidebar-bg-color: #313a46;
+$sidebar-bg-color-sec: #3C415C;
+$sidebar-bg-color-tec: #3C525C;
+$color-base: #313a46;
+$text-color-light: #f5f5f5;
+
+$bg-erro-light: rgb(254,119,66);
+$bg-erro-strong: rgba(252,78,84);
+$bg-warn-light: rgb(253,220,159);
+$bg-warn-strong: rgba(252,193,84,1);
+$bg-info-light: rgb(53,217,232);
+$bg-inf-strong: rgba(72,192,255,1);
+
+$breakpoints: ( 
+    mobile: (
+        min: 0px, 
+        max: 480px
+    ), 
+    tablet: (
+        min: 481px, 
+        max: 768px
+    ), 
+    small: (
+        min: 769px, 
+        max: 1200px
+    ), 
+    desktop: (
+        min: 1201px, 
+        max: 2000px
+    ));
+
+$type-alerts: (
+    erro:  (
+        light: rgb(254,119,66),
+        strong: rgb(252,78,84)
+    ), 
+    warn: (
+        light: rgb(253,220,159),
+        strong:rgb(252,193,84)
+    ), 
+    info: (
+        light: rgb(53,217,232),
+        strong:rgb(72,192,255)
+    )
+);
