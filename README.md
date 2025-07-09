@@ -79,7 +79,7 @@ timerdoc__front/
 - `npm run build` – Build the project for production
 - `npm run test` – Run tests
 
-See all scripts in [package.json](c:/DEV/Pessoal/Timerdoc/timerdoc__front/package.json).
+See all scripts in [package.json](./package.json).
 
 ---
 
@@ -108,4 +108,8 @@ Pull requests are welcome! Please lint and test your code before submitting.
 
 ## License
 
-This project is **UNLICENSED**. See [package.json](c:/DEV/Pessoal/Timerdoc/timerdoc__front/package.json) for details.
+This project is **UNLICENSED**. See [package.json](./package.json) for details.
+
+## References
+
+- [Main Project](https://github.com/ricardoponcio/TimerDoc)
